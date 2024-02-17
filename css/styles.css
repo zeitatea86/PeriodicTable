@@ -1,5 +1,5 @@
 body {
-    background-color: aqua;
+    background-color: burlywood;
 }
 
 .elements {
@@ -12,14 +12,27 @@ body {
     float: left;
 }
 
+@keyframes example {
+    0%   {color: blueviolet;}
+    25%  {color: blue;}
+    50%  {color: blueviolet;}
+    100% {color: blue;}
+}
+
 p {
     padding: 0px;
     margin: 0px;
-    color: rgb(8, 201, 34);
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 h1 {
     text-align: center;
+    color:black;
+    font-weight: bolder;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 #tableElements {
@@ -27,4 +40,18 @@ h1 {
     /* float: left; */
     margin: 0 100px 0;
     padding: 0;
+}
+
+/* .elements:hover, .elements:focus, .elements:active {
+    background-color: blanchedalmond;
+} */
+
+.HoverClass1:hover {color: blue !important; background-color: turquoise !important; font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+
+.Legend {
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    position: relative;
+    border-radius: 5% solid;
 }

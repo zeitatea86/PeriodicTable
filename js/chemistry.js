@@ -2510,33 +2510,59 @@ let elementsList={
 // console.log(elementsList.Table.Row[0].Cell[0]);  //1
 // console.log(elementsList.Table.Row[0].Cell[1]);  //H
 // console.log(elementsList.Table.Row[0].Cell[3]);  //1.0084
-
-// for (let i=0;i<10;i++) {
-//     console.log(elementsList.Table.Row[i].Cell[2]);
-// }
-let arrayList=[];
-
-let h=document.getElementById(""+1+"");
-h.innerHTML=elementsList.Table.Row[0].Cell[2];
-// for (let i=0;i<100;i++) {
-//   arrayList.push(elementsList.Table.Row[i].Cell[2]);
-//   var div = document.createElement('div');
-//   div.style.position="relative";
-//   //div.style.color = 'red';
-//   div.innerHTML = "<p>"+elementsList.Table.Row[i].Cell[2]+"</p>"+"<p>"+elementsList.Table.Row[i].Cell[0]+
-//   "</p>"+"<p>"+elementsList.Table.Row[i].Cell[1]+"</p>"+"<p>"+elementsList.Table.Row[i].Cell[3]+"</p>";
-//   div.setAttribute('class', 'elements');
-//   document.body.appendChild(div);
-// }
-
-// for (let i=0;i<18;i++) {
-//   var tr=document.createElement('tr');
-//   var td=document.createElement('td');
-//   td.innerHTML=i+1;
-//   tr.appendChild(td);
-//   document.getElementById("periodicTable").appendChild(tr);
-// }
+// console.log(elementsList.Table.Row[0].Cell[5]); 1s1
+// console.log(elementsList.Table.Row[0].Cell[11]);  Gas
+// console.log(elementsList.Table.Row[0].Cell[15]);  Nonmetal
 
 
+let range = n => [...Array(n).keys()];
+console.log(range(5));
 
-// document.body.appendChild(div);
+///standard state *********
+// 0: "Nonmetal"
+// 1: "Noble gas"
+// 2: "Alkali metal"
+// 3: "Alkaline earth metal"
+// 4: "Metalloid"
+// 5: "Halogen"
+// 6: "Post-transition metal"
+// 7: "Transition metal"
+// 8: "Lanthanide"
+// 9: "Actinide"
+let standardStates=[];
+for (let i=0;i<118;i++) {
+  standardStates.push(elementsList.Table.Row[i].Cell[15]);
+}
+const standardStatesAll =[...new Set(standardStates)];
+console.log(standardStatesAll)
+
+// ******************
+
+for (let i=0;i<118;i++) {
+  let h=document.getElementById(i+1);
+  h.classList.add("HoverClass1");
+  h.innerHTML="<p>"+elementsList.Table.Row[i].Cell[2]+"</p>"+"<p>"+elementsList.Table.Row[i].Cell[0]+
+     "</p>"+"<p>"+elementsList.Table.Row[i].Cell[1]+"</p>"+"<p>"+elementsList.Table.Row[i].Cell[3]+"</p>";
+     if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[0]) {
+      h.style.backgroundColor="greenyellow";
+     } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[1]) {
+      h.style.backgroundColor="darkorange";
+     } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[2]) {
+      h.style.backgroundColor="pink";
+     } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[3]) {
+      h.style.backgroundColor="grey";
+     } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[4]) {
+      h.style.backgroundColor="blue";
+     } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[5]) {
+      h.style.backgroundColor="brown";
+     } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[6]) {
+      h.style.backgroundColor="yellow";
+     } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[7]) {
+      h.style.backgroundColor="whitesmoke";
+     } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[8]) {
+      h.style.backgroundColor="rosybrown";
+     } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[9]) {
+      h.style.backgroundColor="violet";
+     } else {};
+    
+}
