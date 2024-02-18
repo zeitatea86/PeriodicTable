@@ -2505,7 +2505,7 @@ let elementsList={
   };
 
 
-//console.log(elementsList.Table.Columns.Column[2]); //name
+// console.log(elementsList.Table.Columns.Column[2]); //name
 // console.log(elementsList.Table.Row[0].Cell[2]);  //Hydrogen
 // console.log(elementsList.Table.Row[0].Cell[0]);  //1
 // console.log(elementsList.Table.Row[0].Cell[1]);  //H
@@ -2555,7 +2555,6 @@ for (let i=0;i<118;i++) {
   standardStates.push(elementsList.Table.Row[i].Cell[15]);
 }
 const standardStatesAll =[...new Set(standardStates)];
-//console.log(standardStatesAll)
 
 /// ******************
 
@@ -2601,12 +2600,14 @@ for (let i=0;i<118;i++) {
 
 /// ***************
 
+/// Filter by standard state from legend *********
+
 function a(b) {
   let scale=b.style.width;
   b.addEventListener("mouseenter", select);
   b.addEventListener("mouseleave", unselect);
   function select() {
-  b.style.width="300px";
+  b.style.width="100px";
   let x=document.getElementsByClassName("class"+b.id);
   let y=document.getElementsByClassName("elements");
   let z=document.getElementById("firstRow").getElementsByClassName("elements");
@@ -2639,42 +2640,8 @@ function unselect() {
 }
 
 arrElementsByStandardState.forEach(a);
-//a(Nonmetal);
 
-// Nonmetal.addEventListener("mouseenter", selectNonmetal);
-// Nonmetal.addEventListener("mouseleave", unselectNonmetal);
-
-// function selectNonmetal() {
-//   let x=document.getElementsByClassName("classNonmetal");
-//   let y=document.getElementsByClassName("elements");
-//   let z=document.getElementById("firstRow").getElementsByClassName("elements");
-//   let w=document.getElementsByClassName("elements col1");
-
-//   for (let i=0;i<y.length;i++) {
-//     y[i].style.visibility="hidden";
-//   };
-//   for (let i=0;i<x.length;i++) {
-//     x[i].style.visibility="visible";
-//   };
-//   for (let i=0;i<z.length;i++) {
-//     z[i].style.visibility="visible";
-//   };
-//   for (let i=0;i<w.length;i++) {
-//     w[i].style.visibility="visible";
-//   };
-// }
-
-// function unselectNonmetal() {
-//   let x=document.getElementsByClassName("elements");
-//   let z=document.getElementsByClassName("elements hid");
-//   for (let i=0;i<x.length;i++) {
-//     x[i].style.visibility="visible";
-//   };
-//   for (let i=0;i<z.length;i++) {
-//     z[i].style.visibility="hidden";
-//   };
-// }
-
+/// *********************
 
 
 

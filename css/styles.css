@@ -70,7 +70,7 @@ h1 {
 #mainName {
     padding-top: 0px;
     position: relative;
-    top: 100px;
+    top: 5px;
     margin-bottom: 0px;
     margin-top: 0px;
 }
@@ -82,20 +82,61 @@ h1 {
     padding: 0;
 }
 
-/* .elements:hover, .elements:focus, .elements:active {
-    background-color: blanchedalmond;
-} */
-
-.HoverClass1:hover {color: blue !important; background-color: turquoise !important; font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+.HoverClass1:hover {color: blue !important; background-color: turquoise !important; font-weight: bold;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 110%;width: 5.5rem; 
+     border: rgb(6, 20, 224) solid;}
 
 .Legend {
-    width: 100px;
+    width: 80px;
     height: 20px;
-    position:relative;
-    top:200px;
     font-size: 13px;
-    border: black ;
+    border: black solid;
     text-align: center;
+}
+
+.Legend#Nonmetal {
+    position: fixed;
+    top:600px;
+}
+.Legend#NobleGas{
+    position: fixed;
+    top:620px;
+}
+.Legend#AlkaliMetal {
+    position: fixed;
+    top:640px;
+}
+.Legend#AlkalineEarthMetal {
+    position: fixed;
+    top:660px;
+}
+.Legend#Metalloid{
+    position: fixed;
+    top:680px;
+}
+.Legend#Halogen {
+    position: fixed;
+    top:700px;
+}
+.Legend#PostTransitionMetal {
+    position: fixed;
+    top:720px;
+}
+.Legend#TransitionMetal {
+    position: fixed;
+    top:740px;
+}
+.Legend#Lanthanide {
+    position: fixed;
+    top:760px;
+}
+.Legend#Actinide {
+    position: fixed;
+    top:780px;
+}
+
+.State {
+
 }
 
 .group {
@@ -108,6 +149,45 @@ h1 {
 .period { 
     background-color: darkolivegreen;
     border-radius:  5px;
+}
+
+#Gas {
+    background: url(../images/gas.jpg);
+    background-size: 80px 20px;
+    width: 80px;
+    height: 40px;
+    position:fixed;
+    top:450px;
+    font-size: 18px;
+    border: black solid;
+    text-align: center;
+    color: chartreuse;
+}
+
+#Liquid {
+    background: url(../images/liquid.jpg);
+    background-size: 80px 20px;
+    width: 80px;
+    height: 40px;
+    position:fixed;
+    top:490px;
+    font-size: 13px;
+    border: black solid;
+    text-align: center;
+    color: chartreuse;
+}
+
+#Solid {
+    background: url(../images/solid.jpg);
+    background-size: 80px 20px;
+    width: 80px;
+    height: 40px;
+    position:fixed;
+    top:530px;
+    font-size: 13px;
+    border: black solid;
+    text-align: center;
+    color: chartreuse;
 }
 
           /* For mobile phones: */
