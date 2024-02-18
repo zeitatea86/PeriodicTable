@@ -2514,11 +2514,31 @@ let elementsList={
 // console.log(elementsList.Table.Row[0].Cell[11]);  Gas
 // console.log(elementsList.Table.Row[0].Cell[15]);  Nonmetal
 
+/// Legend buttons : ***************
 
-let range = n => [...Array(n).keys()];
-console.log(range(5));
+let Nonmetal = document.getElementById("Nonmetal");
+let NobleGas = document.getElementById("NobleGas");
+let AlkaliMetal = document.getElementById("AlkaliMetal");
+let AlkalineEarthMetal = document.getElementById("AlkalineEarthMetal");
+let Metalloid = document.getElementById("Metalloid");
+let Halogen = document.getElementById("Halogen");
+let PostTransitionMetal = document.getElementById("PostTransitionMetal");
+let TransitionMetal = document.getElementById("TransitionMetal");
+let Lanthanide = document.getElementById("Lanthanide");
+let Actinide = document.getElementById("Actinide");
+
+let arrElementsByStandardState=[];
+arrElementsByStandardState.push(Nonmetal,NobleGas,AlkaliMetal,
+  AlkalineEarthMetal,Metalloid,Halogen,
+  PostTransitionMetal,TransitionMetal,Lanthanide,Actinide);
+
+///  *********************
+
+//let range = n => [...Array(n).keys()];
+//console.log(range(5));
 
 ///standard state *********
+
 // 0: "Nonmetal"
 // 1: "Noble gas"
 // 2: "Alkali metal"
@@ -2529,14 +2549,17 @@ console.log(range(5));
 // 7: "Transition metal"
 // 8: "Lanthanide"
 // 9: "Actinide"
+
 let standardStates=[];
 for (let i=0;i<118;i++) {
   standardStates.push(elementsList.Table.Row[i].Cell[15]);
 }
 const standardStatesAll =[...new Set(standardStates)];
-console.log(standardStatesAll)
+//console.log(standardStatesAll)
 
-// ******************
+/// ******************
+
+/// Adding "AtomicNumber","Symbol","Name","AtomicMass" and standard states colours *************
 
 for (let i=0;i<118;i++) {
   let h=document.getElementById(i+1);
@@ -2545,29 +2568,122 @@ for (let i=0;i<118;i++) {
      "</p>"+"<p>"+elementsList.Table.Row[i].Cell[1]+"</p>"+"<p>"+elementsList.Table.Row[i].Cell[3]+"</p>";
      if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[0]) {
       h.style.backgroundColor="greenyellow";
+      h.classList.add("classNonmetal");
      } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[1]) {
       h.style.backgroundColor="darkorange";
+      h.classList.add("classNobleGas");
      } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[2]) {
       h.style.backgroundColor="pink";
+      h.classList.add("classAlkaliMetal");
      } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[3]) {
       h.style.backgroundColor="grey";
+      h.classList.add("classAlkalineEarthMetal");
      } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[4]) {
-      h.style.backgroundColor="blue";
+      h.style.backgroundColor="aqua";
+      h.classList.add("classMetalloid");
      } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[5]) {
       h.style.backgroundColor="brown";
+      h.classList.add("classHalogen");
      } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[6]) {
       h.style.backgroundColor="yellow";
+      h.classList.add("classPostTransitionMetal");
      } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[7]) {
       h.style.backgroundColor="whitesmoke";
+      h.classList.add("classTransitionMetal");
      } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[8]) {
       h.style.backgroundColor="rosybrown";
+      h.classList.add("classLanthanide");
      } else if (elementsList.Table.Row[i].Cell[15] ===standardStatesAll[9]) {
       h.style.backgroundColor="violet";
+      h.classList.add("classActinide");
      } else {};
-    
 }
+
+/// ***************
+
+function a(b) {
+  let scale=b.style.width;
+  b.addEventListener("mouseenter", select);
+  b.addEventListener("mouseleave", unselect);
+  function select() {
+  b.style.width="300px";
+  let x=document.getElementsByClassName("class"+b.id);
+  let y=document.getElementsByClassName("elements");
+  let z=document.getElementById("firstRow").getElementsByClassName("elements");
+  let w=document.getElementsByClassName("elements col1");
+
+  for (let i=0;i<y.length;i++) {
+    y[i].style.visibility="hidden";
+  };
+  for (let i=0;i<x.length;i++) {
+    x[i].style.visibility="visible";
+  };
+  for (let i=0;i<z.length;i++) {
+    z[i].style.visibility="visible";
+  };
+  for (let i=0;i<w.length;i++) {
+    w[i].style.visibility="visible";
+  };
+}
+function unselect() {
+  b.style.width=scale;
+  let x=document.getElementsByClassName("elements");
+  let z=document.getElementsByClassName("elements hid");
+  for (let i=0;i<x.length;i++) {
+    x[i].style.visibility="visible";
+  };
+  for (let i=0;i<z.length;i++) {
+    z[i].style.visibility="hidden";
+  };
+}
+}
+
+arrElementsByStandardState.forEach(a);
+//a(Nonmetal);
+
+// Nonmetal.addEventListener("mouseenter", selectNonmetal);
+// Nonmetal.addEventListener("mouseleave", unselectNonmetal);
+
+// function selectNonmetal() {
+//   let x=document.getElementsByClassName("classNonmetal");
+//   let y=document.getElementsByClassName("elements");
+//   let z=document.getElementById("firstRow").getElementsByClassName("elements");
+//   let w=document.getElementsByClassName("elements col1");
+
+//   for (let i=0;i<y.length;i++) {
+//     y[i].style.visibility="hidden";
+//   };
+//   for (let i=0;i<x.length;i++) {
+//     x[i].style.visibility="visible";
+//   };
+//   for (let i=0;i<z.length;i++) {
+//     z[i].style.visibility="visible";
+//   };
+//   for (let i=0;i<w.length;i++) {
+//     w[i].style.visibility="visible";
+//   };
+// }
+
+// function unselectNonmetal() {
+//   let x=document.getElementsByClassName("elements");
+//   let z=document.getElementsByClassName("elements hid");
+//   for (let i=0;i<x.length;i++) {
+//     x[i].style.visibility="visible";
+//   };
+//   for (let i=0;i<z.length;i++) {
+//     z[i].style.visibility="hidden";
+//   };
+// }
+
+
+
+
+/// Scale for mobile phone view : ***************
 
 var siteWidth = 1280;
 var scale = screen.width /siteWidth;
-
 document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
+
+/// ***********************
+
+

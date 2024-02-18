@@ -1,6 +1,8 @@
 body {
     /* background-color: burlywood; */
     background-image:url("../images/chemistry.jpg");
+    position: relative;
+    /* bottom:200px; */
 }
 
 .elements {
@@ -56,12 +58,21 @@ p {
 }
 
 h1 {
+    padding: 0px;
     text-align: center;
     color:black;
     font-weight: bolder;
     animation-name: example;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+}
+
+#mainName {
+    padding-top: 0px;
+    position: relative;
+    top: 100px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 #tableElements {
@@ -78,11 +89,13 @@ h1 {
 .HoverClass1:hover {color: blue !important; background-color: turquoise !important; font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
 
 .Legend {
-    width: 200px;
+    width: 100px;
     height: 20px;
+    position:relative;
+    top:200px;
+    font-size: 13px;
+    border: black ;
     text-align: center;
-    position: relative;
-    border-radius: 5% solid;
 }
 
 .group {
