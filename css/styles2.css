@@ -1,0 +1,142 @@
+body {
+    /* background-color: burlywood; */
+    background-image:url("../images/chemistry.jpg");
+    position: relative;
+    /* bottom:200px; */
+}
+
+#main {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    left:10%;
+    top:70px;
+    bottom: 10%;
+}
+
+.elements {
+    padding: 0;
+    display: block;
+    margin: 0;
+    width: 100px;
+    border: black solid;
+    border-radius:  5px;
+}
+
+h1 {
+    padding: 0px;
+    text-align: center;
+    color:black;
+    font-weight: bolder;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0%   {color: rgb(245, 43, 8);}
+    10%  {color: rgb(236, 222, 14);}
+    20%  {color: rgb(141, 248, 19);}
+    30%  {color: rgb(20, 238, 103);}
+    40%  {color: rgb(12, 236, 206);}
+    50%  {color: rgb(12, 128, 236);}
+    60%  {color: rgb(129, 13, 236);}
+    70%  {color: rgb(224, 11, 171);}
+    80%  {color: rgb(245, 11, 120);}
+    90%  {color: rgb(241, 10, 10);}
+    100%  {color: rgb(83, 4, 4);}
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.Legend {
+    width: 80px;
+    height: 20px;
+    font-size: 13px;
+    border: black solid;
+    text-align: center;
+}
+
+.Legend#Nonmetal {
+    position: fixed;
+    top:600px;
+}
+.Legend#NobleGas{
+    position: fixed;
+    top:620px;
+}
+.Legend#AlkaliMetal {
+    position: fixed;
+    top:640px;
+}
+.Legend#AlkalineEarthMetal {
+    position: fixed;
+    top:660px;
+}
+.Legend#Metalloid{
+    position: fixed;
+    top:680px;
+}
+.Legend#Halogen {
+    position: fixed;
+    top:700px;
+}
+.Legend#PostTransitionMetal {
+    position: fixed;
+    top:720px;
+}
+.Legend#TransitionMetal {
+    position: fixed;
+    top:740px;
+}
+.Legend#Lanthanide {
+    position: fixed;
+    top:760px;
+}
+.Legend#Actinide {
+    position: fixed;
+    top:780px;
+}
+
+#Gas {
+    background: url(../images/gas.jpg);
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    position:fixed;
+    top:150px;
+    font-size: 18px;
+    border: black solid;
+    text-align: center;
+    color: chartreuse;
+}
+
+#Liquid {
+    background: url(../images/liquid.jpg);
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    position:fixed;
+    top:230px;
+    font-size: 18px;
+    border: black solid;
+    text-align: center;
+    color: chartreuse;
+}
+
+#Solid {
+    background: url(../images/solid.jpg);
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    position:fixed;
+    top:310px;
+    font-size: 18px;
+    border: black solid;
+    text-align: center;
+    color: chartreuse;
+}
