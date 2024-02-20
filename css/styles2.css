@@ -21,10 +21,18 @@ body {
     width: 100px;
     border: black solid;
     border-radius:  5px;
+    font-family: "Ubuntu",'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.elementsFinal:hover {color: darkorange !important; background-color: orangered !important;  font-weight: bold;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
-
+.elementsFinal:hover {color: yellow !important; background-color: black !important;  font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 81px !important;height:81px !important;z-index: 1;transform: scale(1.1);
+}
+.firstRow:hover {
+    font-size: 30px;
+}
+.firstColumn:hover {
+    font-size: 30px;
+}
 h1 {
     padding: 0px;
     text-align: center;
@@ -52,8 +60,8 @@ h1 {
 p {
     padding: 0px;
     margin: 0px;
-    color: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    /* color: black; */
+    font-family: "Ubuntu",'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 .Legend {
     width: 80px;
@@ -106,7 +114,8 @@ p {
 
 #Gas {
     background: url(../images/gas.jpg);
-    background-size: 80px 80px;
+    background-size: 160px 160px;
+    background-position: center;
     width: 80px;
     height: 80px;
     position:fixed;
@@ -114,12 +123,14 @@ p {
     font-size: 18px;
     border: black solid;
     text-align: center;
-    color: chartreuse;
+    color: red;
+    font-weight: bold;
 }
 
 #Liquid {
     background: url(../images/liquid.jpg);
-    background-size: 80px 80px;
+    background-size: 160px 160px;
+    background-position: center;
     width: 80px;
     height: 80px;
     position:fixed;
@@ -127,12 +138,14 @@ p {
     font-size: 18px;
     border: black solid;
     text-align: center;
-    color: chartreuse;
+    color: blue;
+    font-weight: bold;
 }
 
 #Solid {
     background: url(../images/solid.jpg);
-    background-size: 80px 80px;
+    background-size: 160px 160px;
+    background-position: center;
     width: 80px;
     height: 80px;
     position:fixed;
@@ -140,7 +153,8 @@ p {
     font-size: 18px;
     border: black solid;
     text-align: center;
-    color: chartreuse;
+    color: black;
+    font-weight: bold;
 }
 
 .hid {
@@ -163,3 +177,23 @@ p {
     padding-top:20px;
 }
 
+#grupa { 
+    color:yellowgreen;
+    text-shadow: 1px 1px #18e929;
+}
+
+#perioada { 
+    color:orangered;
+    text-shadow: 1px 1px #ec8d10;
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.outputElement {
+    font-size: 30px;
+}
+  

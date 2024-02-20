@@ -2550,7 +2550,7 @@ for (let y = 0; y < 10; y++) {
 // console.log(elementsList.Table.Row[0].Cell[11]);  Gas
 // console.log(elementsList.Table.Row[0].Cell[15]);  Nonmetal
 
-/// Legend buttons : ***************
+/// Legend and State buttons : ***************
 
 let Nonmetal = document.getElementById("Nonmetal");
 let NobleGas = document.getElementById("NobleGas");
@@ -2562,11 +2562,18 @@ let PostTransitionMetal = document.getElementById("PostTransitionMetal");
 let TransitionMetal = document.getElementById("TransitionMetal");
 let Lanthanide = document.getElementById("Lanthanide");
 let Actinide = document.getElementById("Actinide");
+let Gas = document.getElementById("Gas");
+let Liquid = document.getElementById("Liquid");
+let Solid = document.getElementById("Solid");
 
-let arrElementsByStandardState = [];
-arrElementsByStandardState.push(Nonmetal, NobleGas, AlkaliMetal,
+let arrElementsByGroupBlock = [];
+arrElementsByGroupBlock.push(Nonmetal, NobleGas, AlkaliMetal,
   AlkalineEarthMetal, Metalloid, Halogen,
   PostTransitionMetal, TransitionMetal, Lanthanide, Actinide);
+let arrElementsByStandardState = [];
+arrElementsByStandardState.push(Gas, Liquid, Solid);
+
+/// **********
 
 /// Populating table with elements ***********
 
@@ -2574,7 +2581,7 @@ let all = document.getElementsByClassName("elements");
 for (let i = 0; i < all.length; i++) {
   if (arrElements.hasOwnProperty(i)) {
     all[i].innerHTML = arrElements[all[i].id];
-    all[i].style.backgroundColor = "yellow";
+    //all[i].style.backgroundColor = "yellow";
     all[i].classList.add("elementsFinal");
   } else {
     if (i === 0) {
@@ -2590,7 +2597,15 @@ for (let i = 0; i < all.length; i++) {
         all[i].innerHTML = i;
         all[i].classList.add("hid");
       }
-    } else {
+    } else if (i === 117) {
+      all[i].innerHTML = "* <p>Lanthanide</p>";
+      all[i].style.backgroundColor = "rosybrown";
+    }
+    else if (i === 136) {
+      all[i].innerHTML = "** <p>Actinide</p>";
+      all[i].style.backgroundColor = "violet";
+    }
+    else {
       all[i].innerHTML = i;
       all[i].classList.add("hid");
     }
@@ -2630,51 +2645,66 @@ for (let i = 0; i < allElements.length; i++) {
     ;
 }
 
+// parsedElementsList[allElements[0].innerText.split("\n")[2]][15]  >>> 'Nonmetal' >>> arrElementsByGroupBlock[0].innerHTML
 for (let i = 0; i < allElements.length; i++) {
-  if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByStandardState[0].innerHTML) {
+  if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByGroupBlock[0].innerHTML) {
     allElements[i].style.backgroundColor = "greenyellow";
     allElements[i].classList.add("classNonmetal");
-  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByStandardState[1].innerHTML) {
+  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByGroupBlock[1].innerHTML) {
     allElements[i].style.backgroundColor = "darkorange";
     allElements[i].classList.add("classNobleGas");
-  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByStandardState[2].innerHTML) {
+  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByGroupBlock[2].innerHTML) {
     allElements[i].style.backgroundColor = "pink";
     allElements[i].classList.add("classAlkaliMetal");
-  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByStandardState[3].innerHTML) {
+  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByGroupBlock[3].innerHTML) {
     allElements[i].style.backgroundColor = "grey";
     allElements[i].classList.add("classAlkalineEarthMetal");
-  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByStandardState[4].innerHTML) {
+  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByGroupBlock[4].innerHTML) {
     allElements[i].style.backgroundColor = "aqua";
     allElements[i].classList.add("classMetalloid");
-  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByStandardState[5].innerHTML) {
+  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByGroupBlock[5].innerHTML) {
     allElements[i].style.backgroundColor = "brown";
     allElements[i].classList.add("classHalogen");
-  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByStandardState[6].innerHTML) {
+  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByGroupBlock[6].innerHTML) {
     allElements[i].style.backgroundColor = "yellow";
     allElements[i].classList.add("classPostTransitionMetal");
-  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByStandardState[7].innerHTML) {
+  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByGroupBlock[7].innerHTML) {
     allElements[i].style.backgroundColor = "whitesmoke";
     allElements[i].classList.add("classTransitionMetal");
-  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByStandardState[8].innerHTML) {
+  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByGroupBlock[8].innerHTML) {
     allElements[i].style.backgroundColor = "rosybrown";
     allElements[i].classList.add("classLanthanide");
-  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByStandardState[9].innerHTML) {
+  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][15] === arrElementsByGroupBlock[9].innerHTML) {
     allElements[i].style.backgroundColor = "violet";
     allElements[i].classList.add("classActinide");
   } else { };
 }
 
+for (let i = 0; i < allElements.length; i++) {
+  if (parsedElementsList[allElements[i].innerText.split("\n")[2]][11] === arrElementsByStandardState[0].innerHTML) {
+    allElements[i].style.setProperty('color', 'red');
+    allElements[i].classList.add("classGas");
+  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][11] === arrElementsByStandardState[1].innerHTML) {
+    allElements[i].style.color = "blue";
+    allElements[i].classList.add("classLiquid");
+  } else if (parsedElementsList[allElements[i].innerText.split("\n")[2]][11] === arrElementsByStandardState[2].innerHTML) {
+    //allElements[i].style.backgroundColor = "pink";
+    allElements[i].classList.add("classSolid");
+  } else { };
+}
+
 /// ***************
 
-/// Filter by standard state from legend *********
+/// Filter by GroupBlock and by StandardState (Gas,Liquid,Solid) from legend on mouseover *********
 
-function a(b) {
-  let scale = b.style.width;
-  b.addEventListener("mouseenter", select);
-  b.addEventListener("mouseleave", unselect);
+function filterByStandardState(elem) {
+  let scale = elem.style.width;
+  elem.addEventListener("mouseenter", select);
+  elem.addEventListener("mouseleave", unselect);
   function select() {
-    b.style.width = "100px";
-    let x = document.getElementsByClassName("class" + b.id);
+    elem.style.width = "150px";
+    elem.style.width += "50%";
+    let x = document.getElementsByClassName("class" + elem.id);
     let y = document.getElementsByClassName("elementsFinal");
     let z = document.getElementsByClassName("firstRow");
     let w = document.getElementsByClassName("elementsFinal firstColumn");
@@ -2693,7 +2723,7 @@ function a(b) {
     };
   }
   function unselect() {
-    b.style.width = scale;
+    elem.style.width = scale;
     let x = document.getElementsByClassName("elementsFinal");
     let z = document.getElementsByClassName("elementsFinal hid");
     for (let i = 0; i < x.length; i++) {
@@ -2705,6 +2735,32 @@ function a(b) {
   }
 }
 
-arrElementsByStandardState.forEach(a);
+arrElementsByGroupBlock.forEach(filterByStandardState);
+arrElementsByStandardState.forEach(filterByStandardState);
+
+/// *********************
+
+/// Adding all elements clicks from table
+
+let names=elementsList.Table.Columns.Column;
+
+function chooseElement(elem) {
+  elem.addEventListener("click", myFunction);
+
+  function myFunction() {
+    var myWindow = window.open("this", "customWindow", "width=800, height=600, top=0, left=960");
+    let x=parsedElementsList[elem.innerText.split("\n")[2]];
+    for (let i=0;i<17;i++) {
+      myWindow.document.write(
+        "<div class='outputElement' style='color:red;background-color:yellow;font-size: 20px;'>"+
+        names[i]+":"+x[i]+"</div>");
+    }
+    
+  }
+
+}
+for (let i=0;i<118;i++) {
+  chooseElement(allElements[i]);
+}
 
 /// *********************
