@@ -27,6 +27,10 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 81px !important;height:81px !important;z-index: 1;transform: scale(1.1);
 }
+.elemHoverred {color: yellow !important; background-color: black !important;  font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 81px !important;height:81px !important;z-index: 1;transform: scale(1.1);
+}
 .firstRow:hover {
     font-size: 30px;
 }
@@ -41,6 +45,17 @@ h1 {
     animation-name: example;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+}
+
+#enterElement {
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    left: 50%;
+    height: 1.8rem;
+    width: 20rem;
+    font-size: large;
+    top:50px;
 }
 
 @keyframes example {
@@ -69,6 +84,7 @@ p {
     font-size: 13px;
     border: black solid;
     text-align: center;
+    border-radius: 10px;
 }
 
 .Legend#Nonmetal {
@@ -125,6 +141,7 @@ p {
     text-align: center;
     color: red;
     font-weight: bold;
+    border-radius: 10px;
 }
 
 #Liquid {
@@ -140,6 +157,7 @@ p {
     text-align: center;
     color: blue;
     font-weight: bold;
+    border-radius: 10px;
 }
 
 #Solid {
@@ -155,6 +173,7 @@ p {
     text-align: center;
     color: black;
     font-weight: bold;
+    border-radius: 10px;
 }
 
 .hid {

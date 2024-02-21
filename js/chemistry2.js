@@ -2742,25 +2742,57 @@ arrElementsByStandardState.forEach(filterByStandardState);
 
 /// Adding all elements clicks from table
 
-let names=elementsList.Table.Columns.Column;
+let names = elementsList.Table.Columns.Column;
 
 function chooseElement(elem) {
   elem.addEventListener("click", myFunction);
 
   function myFunction() {
-    var myWindow = window.open("this", "customWindow", "width=800, height=600, top=0, left=960");
-    let x=parsedElementsList[elem.innerText.split("\n")[2]];
-    for (let i=0;i<17;i++) {
+    var myWindow = window.open("this", "customWindow", "width=800, height=600, top=100, left=960");
+    let x = parsedElementsList[elem.innerText.split("\n")[2]];
+    for (let i = 0; i < 17; i++) {
       myWindow.document.write(
-        "<div class='outputElement' style='color:red;background-color:yellow;font-size: 20px;'>"+
-        names[i]+":"+x[i]+"</div>");
+        "<body style='display:inline;background-color:black;'><div class='outputElement' style='color:red;background-color:yellow;font-size: 20px;'>" +
+        names[i] + ":" + x[i] + "</div></body>");
     }
-    
+
   }
 
 }
-for (let i=0;i<118;i++) {
+for (let i = 0; i < 118; i++) {
   chooseElement(allElements[i]);
+}
+
+/// *********************
+
+/// Adding input entry to find the elements; added jQuery and jQuery UI
+
+function findElem(elem) {
+  let inputTextValue = document.getElementById("enterElement");
+  inputTextValue.addEventListener("change", doSomething);
+  function doSomething(ev) {
+    ev.target.value.toLowerCase() === elem.innerText.split("\n")[4].toLowerCase() ? elem.classList.add("elemHoverred") :
+      elem.classList.remove("elemHoverred");
+  }
+}
+//Using jQuery for autocomplete of the input:
+var availableTags = ["Hydrogen", "Helium", "Lithium", "Beryllium", "Boron", "Carbon", "Nitrogen", "Oxygen", "Fluorine",
+  "Neon", "Sodium", "Magnesium", "Aluminum", "Silicon", "Phosphorus", "Sulfur", "Chlorine", "Argon", "Potassium",
+  "Calcium", "Scandium", "Titanium", "Vanadium", "Chromium", "Manganese", "Iron", "Cobalt", "Nickel", "Copper", "Zinc",
+  "Gallium", "Germanium", "Arsenic", "Selenium", "Bromine", "Krypton", "Rubidium", "Strontium", "Yttrium", "Zirconium",
+  "Niobium", "Molybdenum", "Technetium", "Ruthenium", "Rhodium", "Palladium", "Silver", "Cadmium", "Indium", "Tin",
+  "Antimony", "Tellurium", "Iodine", "Xenon", "Cesium", "Barium", "Lanthanum", "Cerium", "Praseodymium", "Neodymium",
+  "Promethium", "Samarium", "Europium", "Gadolinium", "Terbium", "Dysprosium", "Holmium", "Erbium", "Thulium", "Ytterbium",
+  "Lutetium", "Hafnium", "Tantalum", "Tungsten", "Rhenium", "Osmium", "Iridium", "Platinum", "Gold", "Mercury", "Thallium",
+  "Lead", "Bismuth", "Polonium", "Astatine", "Radon", "Francium", "Radium", "Actinium", "Thorium", "Protactinium", "Uranium",
+  "Neptunium", "Plutonium", "Americium", "Curium", "Berkelium", "Californium", "Einsteinium", "Fermium", "Mendelevium", "Nobelium",
+  "Lawrencium", "Rutherfordium", "Dubnium", "Seaborgium", "Bohrium", "Hassium", "Meitnerium", "Darmstadtium", "Roentgenium",
+  "Copernicium", "Nihonium", "Flerovium", "Moscovium", "Livermorium", "Tennessine", "Oganesson"];
+$("#enterElement").autocomplete({
+  source: availableTags});
+
+for (let i = 0; i < 118; i++) {
+  findElem(allElements[i]);
 }
 
 /// *********************

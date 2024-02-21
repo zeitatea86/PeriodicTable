@@ -6,15 +6,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=1280, initial-scale=1">
     <title>Periodic table</title>
+    <link rel="icon" type="image/x-icon" href="images/molecule.png">
     <link rel="stylesheet" href="css/styles2.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Ubuntu&display=swap"
         rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/listjs/2.3.1/list.min.js"></script>
+
+
 </head>
 
 <body>
     <h1 id="mainName">Periodic table (Mendeleev)</h1>
+    <input type="text" id="enterElement" placeholder=" write element an click enter" value="" name="enterElement" spellcheck="false">
     <div>
         <div>
             <p class="State" id="Gas">Gas</p>
@@ -33,7 +41,7 @@
         <p style="background-color:violet;" class="Legend" id="Actinide">Actinide</p>
     </div>
     <div class="" id="main"></div>
-    <div class="" id="overlay">fdfdfd</div>
+    <div class="" id="overlay"></div>
 
     <script src="js/chemistry2.js" type="text/javascript"></script>
 </body>
