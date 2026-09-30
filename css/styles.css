@@ -5,35 +5,57 @@ body {
     /* bottom:200px; */
 }
 
+#main {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    left:10%;
+    top:70px;
+    bottom: 10%;
+}
+
 .elements {
-    border-radius:  5px;
-    background-color: darkolivegreen;
-    background: transparent;
-    width: 5rem;
-    height: 5rem;
+    padding: 0;
+    display: block;
+    margin: 0;
+    width: 100px;
     border: black solid;
-    text-align: center;
-    float: left;
-}
-
-.hid {
-    visibility: hidden;
-}
-
-#firstRow .elements  {
     border-radius:  5px;
-    background-color: rgb(76, 180, 116);
-    background: transparent;
-    width: 5rem;
-    height: 5rem;
-    border: black solid;
+    font-family: "Ubuntu",'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.elementsFinal:hover {color: yellow !important; background-color: black !important;  font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 81px !important;height:81px !important;z-index: 1;transform: scale(1.1);
+}
+.elemHoverred {color: yellow !important; background-color: black !important;  font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 81px !important;height:81px !important;z-index: 1;transform: scale(1.1);
+}
+.firstRow:hover {
+    font-size: 30px;
+}
+.firstColumn:hover {
+    font-size: 30px;
+}
+h1 {
+    padding: 0px;
     text-align: center;
-    float: left;
-    color: rgb(231, 117, 10);
+    color:black;
+    font-weight: bolder;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
-.col1.elements {
-    color: rgb(231, 117, 10);
+#enterElement {
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    left: 50%;
+    height: 1.8rem;
+    width: 20rem;
+    font-size: large;
+    top:50px;
 }
 
 @keyframes example {
@@ -53,174 +75,118 @@ body {
 p {
     padding: 0px;
     margin: 0px;
-    color: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    /* color: black; */
+    font-family: "Ubuntu",'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
-
-h1 {
-    padding: 0px;
-    text-align: center;
-    color:black;
-    font-weight: bolder;
-    animation-name: example;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-}
-
-#mainName {
-    padding-top: 0px;
-    position: relative;
-    top: 5px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
-
-#tableElements {
-    /* display: inline-block; */
-    /* float: left; */
-    margin: 0 100px 0;
-    padding: 0;
-}
-
-.HoverClass1:hover {color: blue !important; background-color: turquoise !important; font-weight: bold;
-     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 110%;width: 5.5rem; 
-     border: rgb(6, 20, 224) solid;}
-
 .Legend {
     width: 80px;
     height: 20px;
     font-size: 13px;
     border: black solid;
     text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.Legend#Nonmetal {
-    position: fixed;
-    top:600px;
-}
-.Legend#NobleGas{
-    position: fixed;
-    top:620px;
-}
-.Legend#AlkaliMetal {
-    position: fixed;
-    top:640px;
-}
-.Legend#AlkalineEarthMetal {
-    position: fixed;
-    top:660px;
-}
-.Legend#Metalloid{
-    position: fixed;
-    top:680px;
-}
-.Legend#Halogen {
-    position: fixed;
-    top:700px;
-}
-.Legend#PostTransitionMetal {
-    position: fixed;
-    top:720px;
-}
-.Legend#TransitionMetal {
-    position: fixed;
-    top:740px;
-}
-.Legend#Lanthanide {
-    position: fixed;
-    top:760px;
-}
-.Legend#Actinide {
-    position: fixed;
-    top:780px;
-}
-
-.State {
-
-}
-
-.group {
-    text-align: center;
-    text-shadow: burlywood;
-    background-color: azure;
-    border-radius:  5px;
-}
-
-.period { 
-    background-color: darkolivegreen;
-    border-radius:  5px;
-}
+.Legend#Nonmetal      { background-color: greenyellow; position: fixed; top: 600px; }
+.Legend#NobleGas      { background-color: darkorange;  position: fixed; top: 620px; }
+.Legend#AlkaliMetal   { background-color: pink;        position: fixed; top: 640px; }
+.Legend#AlkalineEarthMetal { background-color: grey;   position: fixed; top: 660px; }
+.Legend#Metalloid     { background-color: aqua;        position: fixed; top: 680px; }
+.Legend#Halogen       { background-color: brown;       position: fixed; top: 700px; }
+.Legend#PostTransitionMetal { background-color: yellow;    position: fixed; top: 720px; }
+.Legend#TransitionMetal     { background-color: whitesmoke; position: fixed; top: 740px; }
+.Legend#Lanthanide    { background-color: rosybrown;   position: fixed; top: 760px; }
+.Legend#Actinide      { background-color: violet;      position: fixed; top: 780px; }
 
 #Gas {
     background: url(../images/gas.jpg);
-    background-size: 80px 20px;
+    background-size: 160px 160px;
+    background-position: center;
     width: 80px;
-    height: 40px;
+    height: 80px;
     position:fixed;
-    top:450px;
+    top:150px;
     font-size: 18px;
     border: black solid;
     text-align: center;
-    color: chartreuse;
+    color: red;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 #Liquid {
     background: url(../images/liquid.jpg);
-    background-size: 80px 20px;
+    background-size: 160px 160px;
+    background-position: center;
     width: 80px;
-    height: 40px;
+    height: 80px;
     position:fixed;
-    top:490px;
-    font-size: 13px;
+    top:230px;
+    font-size: 18px;
     border: black solid;
     text-align: center;
-    color: chartreuse;
+    color: blue;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 #Solid {
     background: url(../images/solid.jpg);
-    background-size: 80px 20px;
+    background-size: 160px 160px;
+    background-position: center;
     width: 80px;
-    height: 40px;
+    height: 80px;
     position:fixed;
-    top:530px;
-    font-size: 13px;
+    top:310px;
+    font-size: 18px;
     border: black solid;
     text-align: center;
-    color: chartreuse;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-          /* For mobile phones: */
-          [class*="col-"] {
-            width: 100%;
-               }
-              @media only screen and (min-width: 600px) {
-             /* For tablets: */
-           .col-m-1 {width: 8.33%;}
-           .col-m-2 {width: 16.66%;}
-           .col-m-3 {width: 25%;}
-           .col-m-4 {width: 33.33%;}
-           .col-m-5 {width: 41.66%;}
-           .col-m-6 {width: 50%;}
-           .col-m-7 {width: 58.33%;}
-          .col-m-8 {width: 66.66%;}
-          .col-m-9 {width: 75%;}
-          .col-m-10 {width: 83.33%;}
-          .col-m-11 {width: 91.66%;}
-          .col-m-12 {width: 100%;}
-             }
-            @media only screen and (min-width: 768px) {
-          /* For desktop: */
-          .col-1 {width: 8.33%;}
-          .col-2 {width: 16.66%;}
-          .col-3 {width: 25%;}
-          .col-4 {width: 33.33%;}
-          .col-5 {width: 41.66%;}
-          .col-6 {width: 50%;}
-          .col-7 {width: 58.33%;}
-          .col-8 {width: 66.66%;}
-          .col-9 {width: 75%;}
-          .col-10 {width: 83.33%;}
-          .col-11 {width: 91.66%;}
-          .col-12 {width: 100%;}
-             }
+.hid {
+    visibility: hidden;
+}
+
+.firstRow {
+    padding: 0;
+    border: 0;
+    font-size: 20px;
+    color: yellowgreen;
+    padding-top:20px;
+}
+
+.firstColumn {
+    padding: 0;
+    border: 0;
+    font-size: 20px;
+    color: orangered;
+    padding-top:20px;
+}
+
+#grupa { 
+    color:yellowgreen;
+    text-shadow: 1px 1px #18e929;
+}
+
+#perioada { 
+    color:orangered;
+    text-shadow: 1px 1px #ec8d10;
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.outputElement {
+    font-size: 30px;
+}
+  
