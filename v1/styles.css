@@ -1,0 +1,226 @@
+body {
+    /* background-color: burlywood; */
+    background-image:url("../images/chemistry.jpg");
+    position: relative;
+    /* bottom:200px; */
+}
+
+.elements {
+    border-radius:  5px;
+    background-color: darkolivegreen;
+    background: transparent;
+    width: 5rem;
+    height: 5rem;
+    border: black solid;
+    text-align: center;
+    float: left;
+}
+
+.hid {
+    visibility: hidden;
+}
+
+#firstRow .elements  {
+    border-radius:  5px;
+    background-color: rgb(76, 180, 116);
+    background: transparent;
+    width: 5rem;
+    height: 5rem;
+    border: black solid;
+    text-align: center;
+    float: left;
+    color: rgb(231, 117, 10);
+}
+
+.col1.elements {
+    color: rgb(231, 117, 10);
+}
+
+@keyframes example {
+    0%   {color: rgb(245, 43, 8);}
+    10%  {color: rgb(236, 222, 14);}
+    20%  {color: rgb(141, 248, 19);}
+    30%  {color: rgb(20, 238, 103);}
+    40%  {color: rgb(12, 236, 206);}
+    50%  {color: rgb(12, 128, 236);}
+    60%  {color: rgb(129, 13, 236);}
+    70%  {color: rgb(224, 11, 171);}
+    80%  {color: rgb(245, 11, 120);}
+    90%  {color: rgb(241, 10, 10);}
+    100%  {color: rgb(83, 4, 4);}
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+h1 {
+    padding: 0px;
+    text-align: center;
+    color:black;
+    font-weight: bolder;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#mainName {
+    padding-top: 0px;
+    position: relative;
+    top: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#tableElements {
+    /* display: inline-block; */
+    /* float: left; */
+    margin: 0 100px 0;
+    padding: 0;
+}
+
+.HoverClass1:hover {color: blue !important; background-color: turquoise !important; font-weight: bold;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 110%;width: 5.5rem; 
+     border: rgb(6, 20, 224) solid;}
+
+.Legend {
+    width: 80px;
+    height: 20px;
+    font-size: 13px;
+    border: black solid;
+    text-align: center;
+}
+
+.Legend#Nonmetal {
+    position: fixed;
+    top:600px;
+}
+.Legend#NobleGas{
+    position: fixed;
+    top:620px;
+}
+.Legend#AlkaliMetal {
+    position: fixed;
+    top:640px;
+}
+.Legend#AlkalineEarthMetal {
+    position: fixed;
+    top:660px;
+}
+.Legend#Metalloid{
+    position: fixed;
+    top:680px;
+}
+.Legend#Halogen {
+    position: fixed;
+    top:700px;
+}
+.Legend#PostTransitionMetal {
+    position: fixed;
+    top:720px;
+}
+.Legend#TransitionMetal {
+    position: fixed;
+    top:740px;
+}
+.Legend#Lanthanide {
+    position: fixed;
+    top:760px;
+}
+.Legend#Actinide {
+    position: fixed;
+    top:780px;
+}
+
+.State {
+
+}
+
+.group {
+    text-align: center;
+    text-shadow: burlywood;
+    background-color: azure;
+    border-radius:  5px;
+}
+
+.period { 
+    background-color: darkolivegreen;
+    border-radius:  5px;
+}
+
+#Gas {
+    background: url(../images/gas.jpg);
+    background-size: 80px 20px;
+    width: 80px;
+    height: 40px;
+    position:fixed;
+    top:450px;
+    font-size: 18px;
+    border: black solid;
+    text-align: center;
+    color: chartreuse;
+}
+
+#Liquid {
+    background: url(../images/liquid.jpg);
+    background-size: 80px 20px;
+    width: 80px;
+    height: 40px;
+    position:fixed;
+    top:490px;
+    font-size: 13px;
+    border: black solid;
+    text-align: center;
+    color: chartreuse;
+}
+
+#Solid {
+    background: url(../images/solid.jpg);
+    background-size: 80px 20px;
+    width: 80px;
+    height: 40px;
+    position:fixed;
+    top:530px;
+    font-size: 13px;
+    border: black solid;
+    text-align: center;
+    color: chartreuse;
+}
+
+          /* For mobile phones: */
+          [class*="col-"] {
+            width: 100%;
+               }
+              @media only screen and (min-width: 600px) {
+             /* For tablets: */
+           .col-m-1 {width: 8.33%;}
+           .col-m-2 {width: 16.66%;}
+           .col-m-3 {width: 25%;}
+           .col-m-4 {width: 33.33%;}
+           .col-m-5 {width: 41.66%;}
+           .col-m-6 {width: 50%;}
+           .col-m-7 {width: 58.33%;}
+          .col-m-8 {width: 66.66%;}
+          .col-m-9 {width: 75%;}
+          .col-m-10 {width: 83.33%;}
+          .col-m-11 {width: 91.66%;}
+          .col-m-12 {width: 100%;}
+             }
+            @media only screen and (min-width: 768px) {
+          /* For desktop: */
+          .col-1 {width: 8.33%;}
+          .col-2 {width: 16.66%;}
+          .col-3 {width: 25%;}
+          .col-4 {width: 33.33%;}
+          .col-5 {width: 41.66%;}
+          .col-6 {width: 50%;}
+          .col-7 {width: 58.33%;}
+          .col-8 {width: 66.66%;}
+          .col-9 {width: 75%;}
+          .col-10 {width: 83.33%;}
+          .col-11 {width: 91.66%;}
+          .col-12 {width: 100%;}
+             }
