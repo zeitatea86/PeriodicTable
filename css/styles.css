@@ -85,59 +85,19 @@ p {
     border: black solid;
     text-align: center;
     border-radius: 10px;
+    cursor: pointer;
 }
 
-.Legend#Nonmetal      { background-color: greenyellow; }
-.Legend#NobleGas      { background-color: darkorange; }
-.Legend#AlkaliMetal   { background-color: pink; }
-.Legend#AlkalineEarthMetal { background-color: grey; }
-.Legend#Metalloid     { background-color: aqua; }
-.Legend#Halogen       { background-color: brown; }
-.Legend#PostTransitionMetal { background-color: yellow; }
-.Legend#TransitionMetal { background-color: whitesmoke; }
-.Legend#Lanthanide    { background-color: rosybrown; }
-.Legend#Actinide      { background-color: violet; }
-
-.Legend#Nonmetal {
-    position: fixed;
-    top:600px;
-}
-.Legend#NobleGas{
-    position: fixed;
-    top:620px;
-}
-.Legend#AlkaliMetal {
-    position: fixed;
-    top:640px;
-}
-.Legend#AlkalineEarthMetal {
-    position: fixed;
-    top:660px;
-}
-.Legend#Metalloid{
-    position: fixed;
-    top:680px;
-}
-.Legend#Halogen {
-    position: fixed;
-    top:700px;
-}
-.Legend#PostTransitionMetal {
-    position: fixed;
-    top:720px;
-}
-.Legend#TransitionMetal {
-    position: fixed;
-    top:740px;
-}
-.Legend#Lanthanide {
-    position: fixed;
-    top:760px;
-}
-.Legend#Actinide {
-    position: fixed;
-    top:780px;
-}
+.Legend#Nonmetal      { background-color: greenyellow; position: fixed; top: 600px; }
+.Legend#NobleGas      { background-color: darkorange;  position: fixed; top: 620px; }
+.Legend#AlkaliMetal   { background-color: pink;        position: fixed; top: 640px; }
+.Legend#AlkalineEarthMetal { background-color: grey;   position: fixed; top: 660px; }
+.Legend#Metalloid     { background-color: aqua;        position: fixed; top: 680px; }
+.Legend#Halogen       { background-color: brown;       position: fixed; top: 700px; }
+.Legend#PostTransitionMetal { background-color: yellow;    position: fixed; top: 720px; }
+.Legend#TransitionMetal     { background-color: whitesmoke; position: fixed; top: 740px; }
+.Legend#Lanthanide    { background-color: rosybrown;   position: fixed; top: 760px; }
+.Legend#Actinide      { background-color: violet;      position: fixed; top: 780px; }
 
 #Gas {
     background: url(../images/gas.jpg);
@@ -153,6 +113,7 @@ p {
     color: red;
     font-weight: bold;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 #Liquid {
@@ -169,6 +130,7 @@ p {
     color: blue;
     font-weight: bold;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 #Solid {
@@ -185,6 +147,7 @@ p {
     color: black;
     font-weight: bold;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .hid {

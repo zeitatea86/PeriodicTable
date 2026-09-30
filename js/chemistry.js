@@ -2520,13 +2520,9 @@ let arrElements = {
   180: "Pu", 181: "Am", 182: "Cm", 183: "Bk", 184: "Cf", 185: "Es", 186: "Fm", 187: "Md", 188: "No", 189: "Lr"
 };
 
-var resultElements = Object.keys(arrElements).map((key) => [key, arrElements[key]]);
-// (2) ['20', 'H'](2) ['37', 'He']...
-
 for (let y = 0; y < 10; y++) {
-
-  for (x = 0; x < 19; x++) {
-    var div = document.createElement('div');
+  for (let x = 0; x < 19; x++) {
+    let div = document.createElement('div');
     div.className = "elements";
     div.id = x + 19 * y;
     div.style.position = "absolute";
@@ -2534,21 +2530,9 @@ for (let y = 0; y < 10; y++) {
     div.style.left = 80 * x + "px";
     div.style.width = "80px";
     div.style.height = "80px";
-    //div.style.backgroundColor="blue";
     document.getElementById('main').appendChild(div);
   }
 }
-
-/// ****************
-
-// console.log(elementsList.Table.Columns.Column[2]); //name
-// console.log(elementsList.Table.Row[0].Cell[2]);  //Hydrogen
-// console.log(elementsList.Table.Row[0].Cell[0]);  //1
-// console.log(elementsList.Table.Row[0].Cell[1]);  //H
-// console.log(elementsList.Table.Row[0].Cell[3]);  //1.0084
-// console.log(elementsList.Table.Row[0].Cell[5]); 1s1
-// console.log(elementsList.Table.Row[0].Cell[11]);  Gas
-// console.log(elementsList.Table.Row[0].Cell[15]);  Nonmetal
 
 /// Legend and State buttons : ***************
 
